@@ -27,3 +27,7 @@ commit;
 curl -i -k -H "Content-Type: application/json" -X POST -u admin:ACI\$awD7k\@D4 -d '{"query":{"term":{"dataSet":"perf-mosm-云服务小写"}}}' https://localhost:9200/.threshold-sys/_delete_by_query
 
 参数perf-mosm-云服务小写
+
+
+
+https://support.huawei.com/enterprise/zh/category/cloud-computing-pid-1482614363727?submodel=software
