@@ -31,3 +31,10 @@ curl -i -k -H "Content-Type: application/json" -X POST -u admin:ACI\$awD7k\@D4 -
 
 
 https://support.huawei.com/enterprise/zh/category/cloud-computing-pid-1482614363727?submodel=software
+
+
+-------------------------
+/bin/cp -f /opt/panda/env/app/cse/driver/PrivateCloud/soe/menu.xml /opt/panda/env/app/cse/driver/PrivateCloud/soe/menu_bak
+/bin/cp -f /opt/panda/env/app/cse/driver/PrivateCloud/soe/servicestage_bak /opt/panda/env/app/cse/driver/PrivateCloud/soe/menu.xml
+chown galaxmanager:galaxmanager /opt/panda/env/app/cse/driver/PrivateCloud/soe/*
+sudo -u galaxmanager /bin/bash -c /opt/panda/runtime/tomcat/manager/tools/restart_tomcat.sh
