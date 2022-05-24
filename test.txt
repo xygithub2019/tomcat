@@ -38,3 +38,9 @@ https://support.huawei.com/enterprise/zh/category/cloud-computing-pid-1482614363
 /bin/cp -f /opt/panda/env/app/cse/driver/PrivateCloud/soe/servicestage_bak /opt/panda/env/app/cse/driver/PrivateCloud/soe/menu.xml
 chown galaxmanager:galaxmanager /opt/panda/env/app/cse/driver/PrivateCloud/soe/*
 sudo -u galaxmanager /bin/bash -c /opt/panda/runtime/tomcat/manager/tools/restart_tomcat.sh
+
+
+
+切换dbadmin 
+gsql -U cceuser -h 127.0.0.1
+Changeme_123
