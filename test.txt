@@ -39,8 +39,9 @@ https://support.huawei.com/enterprise/zh/category/cloud-computing-pid-1482614363
 chown galaxmanager:galaxmanager /opt/panda/env/app/cse/driver/PrivateCloud/soe/*
 sudo -u galaxmanager /bin/bash -c /opt/panda/runtime/tomcat/manager/tools/restart_tomcat.sh
 
+---------------------------
 
+UPDATE vmapp.metadata SET AGENT_VERSION = '1.3.21.6',
+UPGRADE_CMD = 'export AGENT_INSTALL_URL=https://#{VMAPP_BUCKET}.#{OBS_DOMAIN}/vmapp/agent/agent-upgrade.sh;if [ -f `which curl` ];then curl -# -O -k ${AGENT_INSTALL_URL};else wget --no-check-certificate ${AGENT_INSTALL_URL};fi;bash agent-upgrade.sh 1.3.21.6 #{REGION} {{autoRegisterSG}}';
 
-切换dbadmin 
-gsql -U cceuser -h 127.0.0.1
-Changeme_123
+ALTER TABLE vmapp.app_tasks ADD COLUMN BATCH integer;
