@@ -45,3 +45,16 @@ UPDATE vmapp.metadata SET AGENT_VERSION = '1.3.21.6',
 UPGRADE_CMD = 'export AGENT_INSTALL_URL=https://#{VMAPP_BUCKET}.#{OBS_DOMAIN}/vmapp/agent/agent-upgrade.sh;if [ -f `which curl` ];then curl -# -O -k ${AGENT_INSTALL_URL};else wget --no-check-certificate ${AGENT_INSTALL_URL};fi;bash agent-upgrade.sh 1.3.21.6 #{REGION} {{autoRegisterSG}}';
 
 ALTER TABLE vmapp.app_tasks ADD COLUMN BATCH integer;
+
+
+--------------------------
+fsp Mgr8Mgjt8Mgzz@U$ root Gjwwhldznsj8@U$
+
+source set_env
+1
+wwhl+znsj=U&M110
+
+
+nova list --all-t| grep <过滤条件>
+
+1	nova update --name <目标名称> <vm-id>
