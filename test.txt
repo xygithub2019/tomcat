@@ -68,3 +68,12 @@ curl -i -k -H 'Accept:application/json' -H 'Content-Type:application/json;charse
 
 
 {"is_filter":false,"resources":[{"type":"ecs"}],"vpc_id":"27ee8e58-628c-4b4c-8343-4d35f69b1d04"}
+
+
+---------------------------------
+array=(ecs-broker-KCMf ecs-broker-l5PO )
+for node_name in ${array[@]}
+do
+nova list --all-t |grep $node_name |awk '{print $2}' |xargs nova delete
+cinder list --all-t |grep $node_name |awk '{print $2}' |xargs cinder delete
+done
