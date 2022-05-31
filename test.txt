@@ -75,5 +75,11 @@ array=(ecs-broker-KCMf ecs-broker-l5PO )
 for node_name in ${array[@]}
 do
 nova list --all-t |grep $node_name |awk '{print $2}' |xargs nova delete
+
+
+--------------------------------
+cd /opt/gaussdb/app/bin/
+
+./gsql -d pub_env -h 127.0.0.1 -p 5432 -U fusionclouddeploy -W IaaS@DATABASE-PublicCLOUD9
 cinder list --all-t |grep $node_name |awk '{print $2}' |xargs cinder delete
 done
