@@ -83,3 +83,22 @@ cd /opt/gaussdb/app/bin/
 ./gsql -d pub_env -h 127.0.0.1 -p 5432 -U fusionclouddeploy -W IaaS@DATABASE-PublicCLOUD9
 cinder list --all-t |grep $node_name |awk '{print $2}' |xargs cinder delete
 done
+
+
+-------------------------
+cd /opt/cloud/
+
+tar -xzvf HUAWEI_CLOUD_Stack_Update-8.1.0-linux-x86_64.tar.gz
+
+mv HCSU_Public_Extend_8.1.0.zip /opt/cloud/HUAWEI_CLOUD_Stack_Update/src/pkg/
+
+mv Upgrade_orchestration_plugin_8.1.0.zip /opt/cloud/HUAWEI_CLOUD_Stack_Update/src/pkg/
+
+
+mv HUAWEI_CLOUD_Stack_Update/install.sh ./
+
+mv HUAWEI_CLOUD_Stack_Update/platform ./
+
+dos2unix install.sh
+
+sh install.sh
