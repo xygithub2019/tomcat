@@ -102,3 +102,9 @@ mv HUAWEI_CLOUD_Stack_Update/platform ./
 dos2unix install.sh
 
 sh install.sh
+
+
+
+hcsu200@HW
+admin/FusionUpdateTool@CLOUD8!
+
